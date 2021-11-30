@@ -1,3 +1,6 @@
+import copy
+
+
 class Complex(object):
     def __init__(self, x):
         self.x = complex(x)
@@ -30,3 +33,7 @@ class Complex(object):
         self.x = self / other
         return self.x
 
+    @classmethod
+    def from_foo(cls, class_instance):
+        x = copy.deepcopy(class_instance.x)
+        return cls(x)
