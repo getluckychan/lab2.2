@@ -33,7 +33,6 @@ class Complex(object):
         self.x = self / other
         return self.x
 
-    @classmethod
-    def from_foo(cls, class_instance):
-        x = copy.deepcopy(class_instance.x)
-        return cls(x)
+    def __copy__(self):
+        print("Копія")
+        return Complex(self.x)
