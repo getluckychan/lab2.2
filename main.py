@@ -1,6 +1,3 @@
-import copy
-
-
 class Complex(object):
     def __init__(self, x):
         self.__x = complex(x)
@@ -36,3 +33,6 @@ class Complex(object):
     def __copy__(self):
         print("Копія")
         return Complex(self.__x)
+
+    def __str__(self):
+        pass
